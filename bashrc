@@ -16,6 +16,23 @@ main() {
   alias vpn='sudo openconnect -b -l -u JHossler --juniper vpn.adtran.com'
   alias vpn-reset='sudo kill -6 $(pidof openconnect)'
   shopt -s checkwinsize
+
+  # Aliases
+  alias la='ls -la'
+  alias activenv='source venv/bin/activate'
+  alias activenvv='source /home/twan/Documents/venv/bin/activate'
+  alias mybash='vim /home/twan/.bashrc'
+  alias mytmux='vim /home/twan/.tmux.conf'
+  alias rebash='source ~/.bashrc'
+  alias get6310buildparameters='wget https://jenkins-m1-hsv.adtran.com/job/fiber_github_organization/job/1u-olt-16port/job/master/lastSuccessfulBuild/artifact/build_parameters.json'
+  alias mygrep='grep -nr $1'
+  alias open='gio open $1'
+  alias fiber='cd ~/Documents/git/fiber'
+  alias c='clear'
+  alias sharefolder='echo twan-pc:25565; python -m SimpleHTTPServer 25565'
+
+  # settings
+  stty -ixon
 }
 
 create_aliases() {
@@ -38,7 +55,7 @@ setup_bash_it() {
   export BASH_IT_THEME='atomic'
   export BASH_IT_AUTOMATIC_RELOAD_AFTER_CONFIG_CHANGE=1
   export SCM_CHECK=true  # Show SCM status in prompt
-  export THEME_SHOW_CLOCK=false
+  export THEME_SHOW_CLOCK=true
   export THEME_SHOW_BATTERY=true
   source $BASH_IT/bash_it.sh
 }
@@ -91,3 +108,13 @@ if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ] && [ -z "$TM
   exec startx
 fi
 main
+
+
+if [ -f ~/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh ]; then
+      source ~/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
+fi
+
+for file in ~/.fiber-testbed-alias/*.bashrc;
+do
+ source ${file}
+done
