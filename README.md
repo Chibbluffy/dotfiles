@@ -5,7 +5,12 @@ Just a bunch of dotfiles.
 Clone and symlink or install with [ellipsis][ellipsis]:
 
 ```
-$ ellipsis install jmhossler/dotfiles
+$ ellipsis install Chibbluffy/dotfiles
 ```
 
 [ellipsis]: http://ellipsis.sh
+
+Will need to do some other things to get it working completely.
+Install powerline(pip), etc
+
+
