@@ -32,11 +32,8 @@ filetype plugin indent on
 au BufNewFile,BufRead *.sux set filetype=javascript
 
 :nmap \l :setlocal number!<CR>
-:nmap \o :set paste!<CR>
-
-if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal" || $TERM == "konsole"
-	set t_CO=256
-endif
+:nmap \p :set paste!<CR>
+:nmap \o :set nopaste!<CR>
 
 :nmap \e :NERDTreeToggle<CR>
 :nmap \T :set expandtab tabstop=8 shiftwidth=8 softtabstop=4<CR>
@@ -62,7 +59,10 @@ endif
 
 :set colorcolumn=80
 
-:imap jj <Esc>
+:nnoremap j k
+:nnoremap k j
+
+:imap jj <Esc>:%!python -m json.tool<CR>
 :imap jk <Esc>
 
 let g:syntastic_cpp_compiler = "g++"
