@@ -9,6 +9,8 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'tarekbecker/vim-yaml-formatter'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -24,6 +26,9 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+
+" disables folding"
+set nofoldenable
 
 execute pathogen#infect()
 syntax on
@@ -64,6 +69,8 @@ au BufNewFile,BufRead *.sux set filetype=javascript
 
 :imap jj <Esc>:%!python -m json.tool<CR>
 :imap jk <Esc>
+:nmap tt :pclose<CR>
+:nmap <space> i<space><Esc>
 
 let g:syntastic_cpp_compiler = "g++"
 let g:syntastic_cpp_compiler_opertions = "-std=c++11 -Wall -Wextra -Wpedantic"
