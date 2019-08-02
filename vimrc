@@ -37,8 +37,6 @@ filetype plugin indent on
 au BufNewFile,BufRead *.sux set filetype=javascript
 
 :nmap \l :setlocal number!<CR>
-:nmap \p :set paste!<CR>
-:nmap \o :set nopaste!<CR>
 
 :nmap \e :NERDTreeToggle<CR>
 :nmap \T :set expandtab tabstop=8 shiftwidth=8 softtabstop=4<CR>
@@ -46,6 +44,10 @@ au BufNewFile,BufRead *.sux set filetype=javascript
 :nmap \M :set noexpandtab tabstop=8 softstabstop=4 shiftwidth=4<CR>
 :nmap \m :set expandtab tabstop=2 shiftwidth=2 softtabstop=2<CR>
 :nmap \w :setlocal wrap!<CR>:setlocal wrap?<CR>
+
+"global copy and paste. might be * instead of + on some systems"
+:nmap \y "+yy
+:nmap \p "+p
 
 :set background=light
 
@@ -56,6 +58,7 @@ au BufNewFile,BufRead *.sux set filetype=javascript
 :set number
 :set relativenumber
 :set nocompatible
+:set clipboard=unnamedplus
 
 :set splitbelow
 :set splitright
@@ -66,10 +69,14 @@ au BufNewFile,BufRead *.sux set filetype=javascript
 
 :nnoremap j k
 :nnoremap k j
+:vnoremap j k
+:vnoremap k j
 
-:imap jj <Esc>:%!python -m json.tool<CR>
+:nmap \j <Esc>:%!python -m json.tool<CR>
 :imap jk <Esc>
+"closes preview"
 :nmap tt :pclose<CR>
+"adds a space"
 :nmap <space> i<space><Esc>
 
 let g:syntastic_cpp_compiler = "g++"

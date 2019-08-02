@@ -21,22 +21,30 @@ main() {
   # Aliases
   # navigation
   alias la='ls -la'
+  alias mygrep='grep -nr $1'
+  alias c='clear'
+  alias open='gio open $1'
+  # virtual envs
   alias activenv='source venv/bin/activate'
   alias activenvv='source /home/twan/Documents/venv/bin/activate'
-  alias mygrep='grep -nr $1'
-  alias open='gio open $1'
-  alias fiber='cd ~/Documents/git/fiber'
-  alias marc='cd ~/Documents/git/fiber/forks/mosaic-robot-controller'
-  alias c='clear'
-  alias sharefolder='echo twan-pc:25565; python -m SimpleHTTPServer 25565'
+  alias activenvvv='source /home/twan/Documents/venv3/bin/activate'
+  # github shortcuts
   alias h='hub'
+  alias gs='git status'
+  alias gc='git commit'
+  alias gp='git pull'
+  alias gf='git fetch'
+  # sharing stuff online
+  alias sharefolder='echo twan-pc:25565; python -m SimpleHTTPServer 25565'
   # open configs
   alias mybash='vim /home/twan/.bashrc'
   alias mytmux='vim /home/twan/.tmux.conf'
   alias myvim='vim ~/.vimrc'
-  # resource bash
+  # re-source bash
   alias rebash='source ~/.bashrc'
   # adtran specific
+  alias fiber='cd ~/Documents/git/fiber'
+  alias marc='cd ~/Documents/git/fiber/mosaic-robot-controller'
   alias get6310buildparameters='wget https://jenkins-m1-hsv.adtran.com/job/fiber_github_organization/job/1u-olt-16port/job/master/lastSuccessfulBuild/artifact/build_parameters.json'
 
   # settings
@@ -115,9 +123,18 @@ export XDG_DATA_HOME=$HOME/.local/share
 if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ] && [ -z "$TMUX" ] && [ -z "$SSH_CONNECTION" ]; then
   exec startx
 fi
-main
+main;
 
+function zz() {
+  zenity --info --text="Finished $@" --display=:0
+}
 
 if [ -f ~/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh ]; then
       source ~/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
 fi
+
+for file in ~/.fiber-testbed-alias/*.bashrc;
+do
+ source ${file}
+done
+
