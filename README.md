@@ -1,5 +1,5 @@
-# jmhossler/dotfiles
-Just a bunch of dotfiles.
+# Dotfiles
+Based off of jmhossler/dotfiles
 
 ## Install
 Clone and symlink or install with [ellipsis][ellipsis]:
