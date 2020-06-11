@@ -15,9 +15,11 @@ $ cd ~/.ellipsis/bin
 
 ```
 $ ellipsis install chibbluffy/dotfiles
+$ pip install --user powerline-status
 $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 $ vim
 :InstallPlugins
+
 ```
 
 [ellipsis]: http://ellipsis.sh
