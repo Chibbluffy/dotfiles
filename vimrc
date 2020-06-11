@@ -66,6 +66,8 @@ au BufNewFile,BufRead *.sux set filetype=javascript
 :set nocompatible
 :set clipboard=unnamedplus
 
+:set backspace=indent,eol,start  " more powerful backspacing
+
 :set splitbelow
 :set splitright
 
