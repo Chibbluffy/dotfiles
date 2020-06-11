@@ -26,3 +26,8 @@ Will need to do some other things to get it working completely.
 Install powerline(pip), etc
 
 
+## Github setup
+[Global tokens]: https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line
+This is because I use Two-Factor Auth now.
+[ssh-key setup]: https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+
