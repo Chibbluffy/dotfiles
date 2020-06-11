@@ -34,7 +34,7 @@ main() {
   alias gd='git diff'
   alias ga='git add'
   alias gc='git commit -m'
-  alias gp='git pull'
+  alias gp='git push'
   alias gf='git fetch'
   # sharing stuff online
   alias sharefolder='echo twan-pc:25565; python -m SimpleHTTPServer 25565'
