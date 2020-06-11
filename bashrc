@@ -26,12 +26,14 @@ main() {
   alias open='gio open $1'
   # virtual envs
   alias activenv='source venv/bin/activate'
-  alias activenvv='source /home/tom/Documents/venv/bin/activate'
-  alias activenvvv='source /home/tom/Documents/venv3/bin/activate'
+  alias activenvv='source ~/Documents/venv/bin/activate'
+  alias activenvvv='source ~/Documents/venv3/bin/activate'
   # github shortcuts
   alias h='hub'
   alias gs='git status'
-  alias gc='git commit'
+  alias gd='git diff'
+  alias ga='git add'
+  alias gc='git commit -m'
   alias gp='git pull'
   alias gf='git fetch'
   # sharing stuff online
