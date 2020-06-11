@@ -27,9 +27,9 @@ Install powerline(pip), etc
 
 
 ## Github setup
-This is because I use Two-Factor Auth now.
+This is because I use Two-Factor Auth now.<br>
 [Global tokens](
- https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line)
+ https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line)<br>
 [ssh-keys setup](
 [ssh-keyLink]: https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
