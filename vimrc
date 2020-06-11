@@ -1,3 +1,8 @@
+" To setup run below commands:
+" git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+" vim
+" :InstallPlugins
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -46,6 +51,7 @@ au BufNewFile,BufRead *.sux set filetype=javascript
 :nmap \w :setlocal wrap!<CR>:setlocal wrap?<CR>
 
 "global copy and paste. might be * instead of + on some systems"
+"for Mac, must do 'brew install vim' to use the clipboard
 :nmap \y "+yy
 :nmap \p "+p
 
