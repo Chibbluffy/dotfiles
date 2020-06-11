@@ -14,8 +14,8 @@ main() {
 
   export GOPATH="$HOME/go"
   export GITHUB_HOST=github.adtran.com
-  alias vpn='sudo openconnect -b -l -u JHossler --juniper vpn.adtran.com'
-  alias vpn-reset='sudo kill -6 $(pidof openconnect)'
+  # alias vpn='sudo openconnect -b -l -u JHossler --juniper vpn.adtran.com'
+  # alias vpn-reset='sudo kill -6 $(pidof openconnect)'
   shopt -s checkwinsize
 
   # Aliases
@@ -26,8 +26,8 @@ main() {
   alias open='gio open $1'
   # virtual envs
   alias activenv='source venv/bin/activate'
-  alias activenvv='source /home/twan/Documents/venv/bin/activate'
-  alias activenvvv='source /home/twan/Documents/venv3/bin/activate'
+  alias activenvv='source /home/tom/Documents/venv/bin/activate'
+  alias activenvvv='source /home/tom/Documents/venv3/bin/activate'
   # github shortcuts
   alias h='hub'
   alias gs='git status'
@@ -37,15 +37,11 @@ main() {
   # sharing stuff online
   alias sharefolder='echo twan-pc:25565; python -m SimpleHTTPServer 25565'
   # open configs
-  alias mybash='vim /home/twan/.bashrc'
-  alias mytmux='vim /home/twan/.tmux.conf'
+  alias mybash='vim ~/.bashrc'
+  alias mytmux='vim ~/.tmux.conf'
   alias myvim='vim ~/.vimrc'
   # re-source bash
   alias rebash='source ~/.bashrc'
-  # adtran specific
-  alias fiber='cd ~/Documents/git/fiber'
-  alias marc='cd ~/Documents/git/fiber/mosaic-robot-controller'
-  alias get6310buildparameters='wget https://jenkins-m1-hsv.adtran.com/job/fiber_github_organization/job/1u-olt-16port/job/master/lastSuccessfulBuild/artifact/build_parameters.json'
 
   # settings
   stty -ixon
@@ -53,7 +49,7 @@ main() {
 
 create_aliases() {
   alias grep='grep --color=auto --exclude=*~'
-  alias ls='ls --color=auto'
+  alias ls='ls -G'
   command_exists thefuck && eval $(thefuck --alias shimatta)
 }
 
@@ -133,8 +129,4 @@ if [ -f ~/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.s
       source ~/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
 fi
 
-for file in ~/.fiber-testbed-alias/*.bashrc;
-do
- source ${file}
-done
 
