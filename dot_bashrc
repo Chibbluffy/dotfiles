@@ -8,7 +8,6 @@ export HISTFILESIZE=10000000
 export HISTCONTROL=ignoreboth
 export HISTCONTROL+=':erasedups'
 export HISTIGNORE='ls:bg:fg:history'
-safe_append_prompt_command 'history -a'
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
