@@ -1,0 +1,34 @@
+# enable color support of ls and also add handy aliases
+alias la='ls -laGF --color=auto'
+alias ls='ls -GF --color=auto'
+alias grep='grep --color=auto --exclude=*~'
+alias mygrep='grep -nr $1'
+alias c='clear'
+alias open='gio open $1'
+
+# open configs
+alias mybash='vim ~/.bashrc'
+alias myz='vim ~/.zshrc'
+alias mytmux='vim ~/.tmux.conf'
+alias myvim='vim ~/.vimrc'
+alias mytmux='vim ~/.tmux.conf'
+
+# virtual envs
+alias activenv='source venv/Scripts/activate'
+alias activenvv='source ~/venv/Scripts/activate'
+alias activenvvv='source ~/venv3/Scripts/activate'
+
+# tmux shortcuts
+alias newmux='tmux new -s'
+alias killmux='tmux kill-server'
+alias attach='tmux attach -t'
+alias detach='tmux detach'
+
+alias resume='fg'
+alias caffeine='caffeine64 -useshift -oldicons &'
+
+# re-source bash
+alias rebash='source ~/.bashrc'
+alias rez='source ~/.zshrc'
+
+
